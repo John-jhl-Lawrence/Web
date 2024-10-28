@@ -1,0 +1,64 @@
+Body{
+    background: linear-gradient(rgb(245, 201, 245), rgb(195, 220, 236));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   
+}
+h1{
+   border-style: groove; 
+    color:rgb(59, 31, 61);
+    text-align: center;
+    
+}
+h2{
+    border-style: groove; 
+    color:rgb(59, 31, 61);
+    text-align: left;
+}
+p{
+    color: rgb(31, 19, 32);
+    font-family: "sans-serif", "consolas";
+    border-style: solid;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+li.navlist a{
+    float: center;
+    margin-right: 20px;
+}
+
+input {
+    width: 40%;
+}
+
+input[type=text] {
+        padding: 10px 20px;
+        margin:10px 0;
+        box-sizing: border-box;
+        border: 2px solid;
+        border-radius: 4px;
+    }
+form.Info label{
+    color: rgb(21, 15, 21);
+}
+
+form.Info input[type=text]:focus {
+    background-color: azure;
+}
+
+form.Info input[type=submit]{
+    background-color: rgb(232, 219, 244);
+    color: rgb(6, 17, 17);
+    cursor: pointer;
+}
+ ul.nav{
+    list-style-type: none;
+    margin: 10;
+    padding: 0;
+ }
+

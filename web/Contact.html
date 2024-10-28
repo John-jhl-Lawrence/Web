@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   
+    <a href="index.html"
+    button style="background-color: rgb(106, 160, 230); 
+    font-family: sans-serif; color:azure; border-radius: 5px; align-items: center;">Home</a>
+    <h1 class="PageTitle"> Get in touch </h1>
+    <div>
+        <form class="Info" id="info">
+        <h2> Let's create something</h2> 
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="mail">E-mail:</label><br>
+        <input type="text" id="mail" name="mail"><br>
+        <label for="phone">Phone number:</label><br>
+        <input type="text" id="phone" name="phone"><br>
+        <label for="edate">Date of Event:</label><br>
+        <input type="date" id="edate" name="edate"><br>
+        <input type="submit" value="Submit">
+        </form>
+    </div>
+    <h2 id="infotext"></h2>
+    <script>
+        const info = document.getElementById("info");
+
+        info.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const fname = document.getElementById("fname");
+            const lname = document.getElementById("lname");
+            const mail = document.getElementById("mail");
+            const phone = document.getElementById("phone");
+            const edate = document.getElementById("edate");
+
+            if (fname.value == "" || lname.value == "" || mail.value == "" || phone.value == "" || edate.value == "") {
+                alert("ensure you enter a value in all fields");
+            } else {
+                const customSentence = 'Thank you for your request, I look forward to responding as soon as I can figure out how to properly recieve your info!1!'
+                document.getElementById("infotext").innerHTML = customSentence;
+                alert("Your request has been recieved!");
+                console.log(
+                    '${fname.value}, ${lname.value}, e-mail of ${mail.value}, phone number {phone.value}, with edate of ${edate.value} is trying to contact you about your cars extended warranty'
+
+           );  
+
+                fname.value = "";
+                lname.value = "";
+                mail.value = "";
+                phone.value = "";
+                edate.value = ""; 
+            }
+        });
+    </script>
+
+    </section>
+
+</body>
+</html>
